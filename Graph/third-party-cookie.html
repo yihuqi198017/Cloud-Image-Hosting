@@ -1,0 +1,15 @@
+
+
+<!DOCTYPE html><html><script>
+                    const timestamp = new Date().getTime();
+                    const cookieStr = '3rdPartyCookie=' + String(timestamp);
+                    document.cookie = cookieStr + '; SameSite=None; Secure;';
+                    if (window.self !== window.top) {
+                      parent.postMessage({
+                        type: "DETECT_THIRD_PARTY_COOKIE",
+                        content: !(new RegExp(cookieStr)).test(document.cookie),
+                      }, '*');
+                    }
+                    </script><body><script>
+with(document)with(body)with(insertBefore(createElement("script"),firstChild))setAttribute("exparams","category=&userid=&aplus&udpid=&&yunid=&&trid=db999d1b17746801741988668e&asid=AQAAAABueMdp8WU8FgAAAACRDKae/YncdQ==",id="tb-beacon-aplus",src=(location>"https"?"//g":"//g")+".alicdn.com/alilog/mlog/aplus_v2.js")
+</script></body></html>
